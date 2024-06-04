@@ -1,0 +1,5 @@
+rouge_score
+transformers==4.39.0
+datasets==2.18.0
+bert-score
+evaluate
