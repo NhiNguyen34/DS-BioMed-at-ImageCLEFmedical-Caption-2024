@@ -21,7 +21,7 @@ parser.add_argument("--data_dir", type=str, required=True, help="Directory conta
 parser.add_argument("--IMG_MODEL", type=str, required=True, help="Pretrained models")
 args = parser.parse_args()
 
-def createCollatorAndModel(image=IMG_MODEL):
+def createCollatorAndModel(image=args.IMG_MODEL):
     preprocessor = AutoImageProcessor.from_pretrained(image)
     collator = MyCollator(preprocessor=preprocessor)
     model = ConceptDetectionModel(pretrained_image_name=image,).to(device)
@@ -58,7 +58,7 @@ def train(IMG_MODEL):
 
     torch.cuda.empty_cache()
     # Initialize the actual collator and multimodal model
-    collator, model = createCollatorAndModel(IMG_MODEL)
+    collator, model = createCollatorAndModel()
 
     # Initialize the trainer with the dataset, collator, model, hyperparameters and evaluation metrics
     multi_trainer = Trainer(
