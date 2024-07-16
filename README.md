@@ -56,16 +56,6 @@ Our caption generation model is based on the BEiT+BioBart architecture. This mod
 3. **Download pretrained models:** (Provide instructions and links)
 4. **Run inference:** Follow the instructions in the `inference.ipynb` notebook.
 
-## Citation
-
-If you find this work helpful, please cite our paper:
-
-@inproceedings{DSBioMed_ImageCLEF2024,
-title={DS@BioMed at ImageCLEFmedical Caption 2024: Enhanced Attention Mechanisms in Medical Caption Generation through Concept Detection Integration},
-author={DS@BioMed Team},
-booktitle={ImageCLEF 2024},
-year={2024}
-}
 
 ## License
 
